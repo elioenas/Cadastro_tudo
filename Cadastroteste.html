@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title></title>
+</head>
+<meta charset="utf-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/Cadastroteste.css">
+
+<script type="text/javascript" src="validacoes.js"></script>
+<body>
+<div id="container" align="center">
+	<form id="formulario"  method="post" action="" class="boxmodel">
+    <div>
+            <img src="img/ubf.png" id="logo">
+          </div>
+	<div class="center-align"style="margin-top: 20px; margin-bottom: 30px; color:black">
+	 <h1 style="font-size:24px;">Cadastro<h1>
+	</div>
+	<div id="nome">
+    </div>
+    <div>
+      <input type="text" class="form-control"  placeholder="Nome" required="required" style="width:350px;">
+    </div>
+    <br>
+  <div id="cpf">
+    </div>
+    <div>
+      <input type="text" class="form-control"  placeholder="Ex.: XXX.XXX.XXX-XX" required="required"  style="width:350px;">
+    </div>
+    <br>
+  <div id="matricula">
+    </div>
+    <div>
+      <input type="number" class="form-control"  placeholder="Matricula" required="required"  style="width:350px;">
+    </div>
+    <br>
+  <div id="email">
+    </div>
+    <div >
+      <input type="Email" class="form-control" placeholder="Email" required="required"  style="width:350px;">
+    </div>
+    <br>
+   <div id="telefone">
+    </div>
+    <div>
+      <input type="text" class="form-control"  placeholder="Ex.: XXX.XXXXX-XXXX" required="required"  style="width:350px;">
+    </div>
+    <br>
+<div id="curso">
+	<div>
+		<input type="text" class="form-control" placeholder=" Ex: Ciencia da Computação" required="required" style="width:350px;">
+    </div>
+    <br>
+	<div  id = "periodo" style="width:350px;">
+	<label >Periodo:</label>
+    </div>
+    <div>
+    	<select name="Periodo" style="width:350px;">
+			<option value="1º">1ª periodo</option>
+			<option value="2º">2ª periodo</option>
+			<option value="3º">3ª periodo</option>
+			<option value="4º">4ª periodo</option>
+			<option value="5º">5ª periodo</option>
+			<option value="6º">6ª periodo</option>
+			<option value="7º">7ª periodo</option>
+			<option value="8º">8ª periodo</option>
+		</select>
+    </div>
+    <div style="width:350px;">
+	<label >Area de Interesse:</label>
+    </div>
+    <div>
+    	<select name="Periodo" style="width:350px;">
+			<option value="">Gerente de Projetos</option>
+			<option value="">Analista de Requisitos</option>
+			<option value="">Front-End</option>
+			<option value="">Back-End</option>
+			<option value="">Banco de Dados</option>
+			<option value="">Mobile</option>
+			<option value="">Jogos</option>
+			<option value="">Teste</option>
+		</select>
+    </div>
+    <br>
+     <div style="text-align: left;">
+          <label >Documento de identidade:</label>
+      </div>
+      <div>
+          <input type="file" name="arquivo" required style="width:355px;">
+          <!--voce vai carregar um arquivo do seu computador-->
+          <!-- accept="image/*" vai limitar para enviar somente imagens para o servidor-->
+        </div>
+        <div style="text-align: left;">
+          <label>Declaração de matricula:</label>
+      </div>
+      <div>
+          <input type="file" name="arquivo" required style="width:355px;">
+          <!--voce vai carregar um arquivo do seu computador-->
+          <!-- accept="image/*" vai limitar para enviar somente imagens para o servidor-->
+        </div>
+         <div style="text-align: left;">
+          <label>Horário individual:</label>
+      </div>
+      <div>
+          <input type="file" name="arquivo" required style="width:355px;">
+          <!--voce vai carregar um arquivo do seu computador-->
+          <!-- accept="image/*" vai limitar para enviar somente imagens para o servidor-->
+        </div>
+    </br>
+<div class="center-align">
+  <input type="submit" name="enviar">
+</div>
+</div>
+	</form>
+</div><!--fechamento da classe container-->
+</body>
+</html>
