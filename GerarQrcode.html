@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>QrCode</title>
+	<meta charset="utf-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+	
+body {
+
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image:linear-gradient( #FF00FF,white);
+}
+
+#containerQrcode{
+
+  padding-top:200px;
+  padding-bottom: 100px;
+
+}
+
+form.boxmodelqr{
+
+  border: 1px solid black;
+  padding: 20px;
+  width: 860px;
+}
+
+form{
+    background-color:white  ;
+}
+
+</style>
+
+</head>
+<body>
+<div id="containerQrcode" align="center">
+<form id="formulario_code"  method="post" action="" class="boxmodelqr">
+	<div>
+		<h1>Cadastro efetuado com sucesso</h1>
+	</div>
+	<br>
+	<div>
+		<h3>Este e seu Qr Code individual .Guarde-o,pois sera solicitado</h3>
+        <h3>para marcar a sua presença nas palestras e workshops da imersão</h3>
+	</div>
+	<br>
+	<div>
+		<img src="qrcode.png">
+	</div>
+	<br>
+	<div>
+		<a href="qrcode.png" download="qrcode">Download</a>
+	</div>
+</form>
+</div><!-- final da  div containerQrcode -->
+</body>
+</html>
