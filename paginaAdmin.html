@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<htm lang = "pt-br">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+	
+body{
+
+background-image: linear-gradient(to right,white 50%, #FF00FF 50%);
+
+}
+
+/*35dg*/
+#container{
+
+	margin-top: 150px;
+	margin-bottom: 100px;
+
+}
+
+form{
+
+	background-color:white  ;
+}
+
+form.boxmodel{
+  border: 1px solid black;
+  width: 400px;
+  padding: 20px;
+
+}
+
+input {
+  outline: none;
+}
+
+
+</style>
+<body >
+	<div class="diagonal"></div>
+	<!-- criando formulario de login-->
+	<div id="container" align="center">
+		<form method="post" action="" class="boxmodel">
+			<br>
+			<div>
+				<input type="text" name="fullname" placeholder="Full Name" required="required" style=" width: 360px;">
+			</div>
+			<br>
+			<div>
+				<input type="email" name="nome" placeholder="Email" required="required" style=" width: 360px;">
+			</div>
+			<br>
+			<div>
+				<input id="password" type="password" name="password" placeholder="Password" required="required" style=" width: 360px;">
+			</div>
+			<br>
+			<div>
+				<input id="repeat_password" type="password" name="password" placeholder=" repeat Password" required="required" style=" width: 360px;">
+			</div>
+			<br>
+			<div style="text-align: left;"> 
+            <input type="checkbox" name="manterlogado" id="manterlogado"/> 
+            <label >Manter-me logado</label>
+          </div>
+          <br>
+			<div>
+				<button type="submit" class="btn btn-dark" style="width: 100px;">Login</button>
+			</div>
+			<br>
+			<div>
+			<p>ainda nao tem conta ? <a href="">Cadastre-se</a></p>
+		     </div>
+		</form>
+	</div>
+</body>
+<script type="">
+	
+	//variaveis
+
+	var password  = document.getElementById("password"),
+    var repeat_password =  document.getElementById("repeat_password");
+
+   // criar funcao pra validar password
+
+   function validatepassword(){
+
+   // verifica se o valor diditado na senha e igual
+   // ao repeat pasword caso nao emite uma mensagem
+   	if(password.value != repeat_password.value) {
+
+    repeat_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    repeat_password.setCustomValidity('');
+  }
+}
+
+  password.onchange = validatePassword;
+  repeat_password.onkeyup = validatePassword;
+
+</script>
+</html>
