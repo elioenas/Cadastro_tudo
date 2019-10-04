@@ -13,7 +13,7 @@
 	
 body{
 
-background-image: linear-gradient(to right,white 50%, #FF00FF 50%);
+   background-color: white;
 
 }
 
@@ -41,16 +41,23 @@ input {
   outline: none;
 }
 
+#logo{
 
+	border-radius:30px ;
+	width: 150px;
+}
 </style>
 <body >
 	<div class="diagonal"></div>
 	<!-- criando formulario de login-->
 	<div id="container" align="center">
 		<form method="post" action="" class="boxmodel">
+			<div>
+				<img src="img/user.png" id="logo">
+			</div>
 			<br>
 			<div>
-				<input type="text" name="fullname" placeholder="Full Name" required="required" style=" width: 360px;">
+				<input type="text" name="name" placeholder="Name" required="required" style=" width: 360px;">
 			</div>
 			<br>
 			<div>
@@ -58,11 +65,11 @@ input {
 			</div>
 			<br>
 			<div>
-				<input id="password" type="password" name="password" placeholder="Password" required="required" style=" width: 360px;">
+				<input id="password" type="password" name="password" minlength="8" maxlength="16" placeholder="Password" required="required" style=" width: 360px;">
 			</div>
 			<br>
 			<div>
-				<input id="repeat_password" type="password" name="password" placeholder=" repeat Password" required="required" style=" width: 360px;">
+				<input id="repeat_password" type="password" minlength="8" maxlength="16" name="repeat_password" placeholder=" repeat Password" required="required" style=" width: 360px;">
 			</div>
 			<br>
 			<div style="text-align: left;"> 
@@ -71,38 +78,33 @@ input {
           </div>
           <br>
 			<div>
-				<button type="submit" class="btn btn-dark" style="width: 100px;">Login</button>
+				<button type="submit" class="btn btn-dark" style="width: 100px;" 
+				onclick="return Validate()">Login</button>
 			</div>
 			<br>
 			<div>
-			<p>ainda nao tem conta ? <a href="">Cadastre-se</a></p>
+			<p>Ja tem uma conta ? <a href="">ir para login</a></p>
 		     </div>
 		</form>
 	</div>
 </body>
 <script type="">
 	
-	//variaveis
 
-	var password  = document.getElementById("password"),
-    var repeat_password =  document.getElementById("repeat_password");
+	 function Validate() {
+            
+            var password = document.getElementById("password").value;
+            var repeat_password = document.getElementById("repeat_password").value;
 
-   // criar funcao pra validar password
+            if (password != repeat_password) {
+                alert(" as senhas não coincidem tente novamente");
+                return false;
+            }
+            return true;
+        }
 
-   function validatepassword(){
-
-   // verifica se o valor diditado na senha e igual
-   // ao repeat pasword caso nao emite uma mensagem
-   	if(password.value != repeat_password.value) {
-
-    repeat_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    repeat_password.setCustomValidity('');
-  }
-}
-
-  password.onchange = validatePassword;
-  repeat_password.onkeyup = validatePassword;
+        password.onchange = validatePassword;
+        repeat_password.onkeyup = validatePassword;
 
 </script>
 </html>
