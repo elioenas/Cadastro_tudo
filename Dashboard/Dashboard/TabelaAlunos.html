@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title></title>
+
+  <style type="text/css">
+  
+form{
+  
+  position: absolute;
+  margin-bottom: 100px;
+  padding-left: 18px;
+}
+
+h4{
+
+  margin-right: 300px;
+
+}
+
+#tabelapronta_alunos{
+
+  position: absolute
+
+   padding-bottom: 150px;
+   padding-top: 150px;
+}
+
+ </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Dashboard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTexto">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Ranking </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="TabeladeHorarios.html" target="_blank">Tabela de Horarios</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="TabelaAlunos.html" target="_blank">Alunos</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Relatórios</a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div><!-- div-->
+   <br>
+   <form class="form-inline my-2 my-lg-0" id="pesquisa">
+     <h4>Alunos</h4>
+     <br>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
+<!---->
+
+<div id="tabelapronta_alunos">
+  <table class="table table-hover table-dark" id="gridaluno">
+  <thead >
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">email</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Curso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark</td>
+      <td>Mark@hotmail.com</td>
+      <td>83 98866 - 7546</td>
+      <td>ciencias contabeis</td>
+    </tr>
+    <tr>
+      <td>jose</td>
+      <td>jose@hotmail.com</td>
+      <td>83 98675 - 7222</td>
+      <td>ciencias contabeis</td>
+    </tr>
+</div>
+
+<!--uam forma de pegar dados de um formulario e colocar na tabela-->
+
+<script type="text/javascript">
+  
+  var d = document;
+function processar(gridaluno)
+{
+  var newRow = d.createElement('tr');
+  newRow.insertCell(0).innerHTML = d.getElementsByName('nome')[0].value;
+  newRow.insertCell(1).innerHTML = d.getElementsByName('email')[0].value;
+  newRow.insertCell(2).innerHTML = d.getElementsByName('telefone')[0].value;
+  newRow.insertCell(3).innerHTML = d.getElementsByName('Curso')[0].value
+
+  d.getElementById(gridaluno).appendChild(newRow);
+  return false;
+
+}
+</script>
+</table>
+</body>
+</html>

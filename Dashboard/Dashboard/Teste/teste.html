@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<form name="formulario" method="post" onsubmit="return criandotabela('tabelaalunos')">  
+	Nome:  <input type="text" name="user">
+	email: <input type="email" name="email">
+	Telefone:<input type="text" name="telefone">
+	Curso:<input type="text" name="curso">
+	<input type="submit" value="Confirmar"> 
+	<a href="telaInicial.html" name="voltar">Voltar</a>
+</form>
+<table class="table table-hover table-dark"  border='1' width='250' height='250'>
+	<tbody id="tabelaalunos"></tbody>
+</table>
+
+<script type="text/javascript">
+	
+var d = document;
+function criandotabela(idTabela)
+{
+	var newRow = d.createElement('tr');
+	newRow.insertCell(0).innerHTML = d.getElementsByName('user')[0].value;
+	newRow.insertCell(1).innerHTML = d.getElementsByName('email')[0].value;
+	newRow.insertCell(2).innerHTML = d.getElementsByName('telefone')[0].value;
+	newRow.insertCell(3).innerHTML = d.getElementsByName('curso')[0].value;
+	d.getElementById(idTabela).appendChild(newRow);
+	
+	return false;
+}
+
+
+</script>
+
+</body>
+</html>
